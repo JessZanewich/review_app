@@ -1,0 +1,20 @@
+<% include partials/header.ejs %>
+<!--Title of Reviews-->
+<div class="ui main text container">
+  <div class="ui huge header">Movie and TV Reviews</div>
+  <div class="ui four column doubling stackable grid container">
+    <div class="ui divided item"></div>
+      <% reviews.forEach(function(review) { %>
+        <div class="column ui item segment">
+          <img class="ui image" src="<%=review.poster%>">
+          <h4><%= review.title %></h4>
+          <div><i class="star icon"></i><%=review.rating%>/5</div>
+        </div>
+      <% }); %>
+  </div>
+  
+</div>
+<!--4 movies/tv shows per a row-->
+<!--Have poster, star rating, title of review, possibly short snippet, and type-->
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RESTful Routing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><strong>RESTful Routing</strong></h1>
+        <p>A table of the 7 REStful routes</p>
+      </div>
+
+      <table class="table table-bordered">
+        <thead>
+          <th>Name</th>
+          <th>Path</th>
+          <th>HTTP</th>
+          <th>Purpose</th>
+          <th>Mongoose Method</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Index</td>
+            <td>/reviews</td>
+            <td>GET</td>
+            <td>List all Reviews</td>
+            <td>Review.find()</td>
+          </tr>
+          <tr class="success">
+            <td>New</td>
+            <td>/reviews/new</td>
+            <td>GET</td>
+            <td>New review form</td>
+            <td>N/A</td>
+          </tr>
+          <tr class="success">
+            <td>Create</td>
+            <td>/reviews</td>
+            <td>POST</td>
+            <td>Create a new review, then redirect</td>
+            <td>Review.create()</td>
+          </tr>
+          <tr class="info">
+            <td>Show</td>
+            <td>/reviews/:id</td>
+            <td>GET</td>
+            <td>Show specific review</td>
+            <td>Review.findById()</td>
+          </tr>
+          <tr class="warning">
+            <td>Edit</td>
+            <td>/reviews/:id/edit</td>
+            <td>GET</td>
+            <td>Edit form for a specfic review</td>
+            <td>Review.findById()</td>
+          </tr>
+          <tr class="warning">
+            <td>Update</td>
+            <td>/reviews/:id</td>
+            <td>PUT</td>
+            <td>Update review, then redirect</td>
+            <td>Review.findByIdAndUpdate()</td>
+          </tr>
+          <tr class="danger">
+            <td>Destroy</td>
+            <td>/reviews/:id</td>
+            <td>DELETE</td>
+            <td>Delete a review, then redirect</td>
+            <td>Review.findByIdAndRemove()</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</body>
+
+</html>
